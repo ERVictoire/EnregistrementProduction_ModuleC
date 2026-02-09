@@ -4,8 +4,12 @@ import java.io.FileWriter;
 import java.io.File;
 import java.io.IOException;
 
+//classe responsable de l'écriture des données de production dans le fichier csv
 public class ProductionFileWriter {
 
+    //ouvre ou crée le fichier production.csv
+    //Ajoute une nouvelle ligne de production
+    //Gère les erreurs d'écriture ( fichier ouvert ailleurs)
     public void ecrire(ProductionData data, int total, double taux) {
         try {
             File file = new File("data/production.csv");
