@@ -1,10 +1,19 @@
 package net.ista2025.bac2IFI.production;
 
+// classe principale de traitement du module c
+//coordonne saisie, validation, calcul, vérification et sauvegarde
 public class ProductionService {
+
+    //vérifie la validité des données avant traitement
     private ProductionValidator validator = new ProductionValidator();
+
+    //calcule le total et le taux de défaut
     private ProductionCalculator calculator = new ProductionCalculator();
+
+    //Detecte une anomalie si taux > 5%
     private ProductionChecker checker = new ProductionChecker();
 
+    //Enregistre la  production dans le fichier csv
     public void traiter(ProductionData data) {
 
         if(!validator.valider(data)) {
