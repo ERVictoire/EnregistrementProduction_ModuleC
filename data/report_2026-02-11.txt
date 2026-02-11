@@ -1,0 +1,4 @@
+=== REPORT PRODUCTION ===
+Date : 2026-02-11
+Programme exécuté avec succès
+production.csv généré
